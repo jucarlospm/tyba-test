@@ -76,3 +76,6 @@ Body
 ````
 GET /api/logs
 ````
+
+## Como correr test
+Para correr los test ir al folder de  `api` y correr `npm run test`
