@@ -5,6 +5,10 @@ Este proyecto usa docker con docker-compose. Entonces solamente se debe correr e
 
 `docker-compose up -d`
 
+Y probar los endpoint localmente con el siguiente puerto
+
+`http://localhost:3000`
+
 ## Enviroments
 Estas son las variables de entorno que se puede usar pobrar el proyecto. Porfa cuidar el Api Key <3
 
