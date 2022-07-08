@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./app.js",
-    "start:dev": "nodemon ./app.js"
+    "start:dev": "nodemon ./app.js",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test": "jest",
+    "test:ci": "jest --coverage --forceExit"
   },
   "keywords": [],
   "author": "Juan Carlos Peña <jucarlospm@gmail.com>",
@@ -22,6 +26,21 @@
     "jsonwebtoken": "^8.5.1",
     "npm": "8.13.2",
     "uuid": "8.3.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/(lib|build|docs|node_modules)/"
+    ],
+    "verbose": true,
+    "setupFilesAfterEnv": [
+      "./setupTest.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/(node_modules|server/db/(migrations|seeds))/",
+      "<rootDir>/server/index.js",
+      "<rootDir>/knexfile.js"
+    ]
   },
   "devDependencies": {
     "jest": "28.1.2",
